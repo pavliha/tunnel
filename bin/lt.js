@@ -77,9 +77,7 @@ if (typeof argv.port !== 'number') {
     throw err;
   });
 
-  tunnel.on('error', err => {
-    throw err;
-  });
+  tunnel.on('error', console.error);
 
   console.log('your url is: %s', tunnel.url);
 
